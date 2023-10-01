@@ -1,0 +1,35 @@
+---
+title: "Test"
+output: html_document
+date: "2023-02-24"
+---
+
+
+### EDA
+
+#Summary
+```{r}
+train_df = read.csv(file = '/Users/meghanavs/Desktop/R-individual-Project/data/train.tsv', sep = '\t', header = TRUE)
+
+test_df = read.csv(file = '/Users/meghanavs/Desktop/R-individual-Project/data/test.tsv', sep = '\t', header = TRUE)
+
+print("Train data size")
+dim(train_df)
+print("Test data size")
+dim(test_df)
+print("Train Columns")
+colnames(train_df)
+
+print("Unique category count")
+length(unique(train_df$category_name))
+print("Unique item condition count")
+length(unique(train_df$item_condition_id))
+print("Unique brand count")
+length(unique(train_df$brand_name))
+
+print("Train data summary")
+summary(train_df)
+print("Test data summary")
+summary(test_df)
+```
+
